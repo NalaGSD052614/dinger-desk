@@ -2,13 +2,14 @@ name: Generate Daily Picks
 
 on:
   schedule:
-    # Times are UTC. GitHub Actions does not adjust for daylight saving.
-    # During MLB season (CDT = UTC-5):
-    #   17:00 UTC = 12:00 PM Central  (first read: odds + early game lineups)
-    #   20:00 UTC = 3:00 PM Central   (primary run: evening lineups + props posted)
-    - cron: '0 17 * * *'
-    - cron: '0 20 * * *'
-  workflow_dispatch:  # allows manual trigger from Actions tab anytime
+    # Off-the-hour times to dodge GitHub Actions scheduler delays
+    # All times UTC, mapped to CDT (UTC-5):
+    #   16:17 UTC = 11:17 AM Central  (first read, lands by noon)
+    #   19:23 UTC = 2:23 PM Central   (primary run, lands by 3 PM)
+    #   21:37 UTC = 4:37 PM Central   (evening safety refresh)
+    - cron: '17 16 * * *'
+    - cron: '23 19 * * *'
+    - cron: '37 21 * * *'
 
 permissions:
   contents: write
