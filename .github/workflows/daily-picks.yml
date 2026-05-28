@@ -1,7 +1,7 @@
 name: Generate Daily Picks
 
 on:
-schedule:
+  schedule:
     # Times are UTC. GitHub Actions does not adjust for daylight saving.
     # During MLB season (CDT = UTC-5):
     #   17:00 UTC = 12:00 PM Central  (first read: odds + early game lineups)
