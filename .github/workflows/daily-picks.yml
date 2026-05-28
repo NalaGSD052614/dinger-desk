@@ -41,11 +41,11 @@ jobs:
         run: |
           git config user.name "Dinger Desk Bot"
           git config user.email "actions@github.com"
-          git pull --rebase origin main
           git add data/picks.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "Daily picks update $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main
             git push
           fi
