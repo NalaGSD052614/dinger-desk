@@ -2,7 +2,7 @@ name: Generate Daily Picks
 
 on:
   schedule:
-    # Off-the-hour times to dodge GitHub Actions scheduler delays
+    # Off-the-hour times to dodge GitHub Actions scheduler delays.
     # All times UTC, mapped to CDT (UTC-5):
     #   16:17 UTC = 11:17 AM Central  (first read, lands by noon)
     #   19:23 UTC = 2:23 PM Central   (primary run, lands by 3 PM)
@@ -10,6 +10,7 @@ on:
     - cron: '17 16 * * *'
     - cron: '23 19 * * *'
     - cron: '37 21 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -36,15 +37,15 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python scripts/generate_picks.py
 
-     - name: Commit and push if changed
+      - name: Commit and push if changed
         run: |
           git config user.name "Dinger Desk Bot"
           git config user.email "actions@github.com"
           git pull --rebase origin main
-          git add data/picks.json data/results.json data/graded_picks.json data/history/
+          git add data/picks.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Daily update $(date -u +%Y-%m-%d)"
+            git commit -m "Daily picks update $(date -u +%Y-%m-%d)"
             git push
           fi
