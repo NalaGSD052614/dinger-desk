@@ -1,229 +1,223 @@
 {
-  "generated_at": "2026-05-27T09:00:00-05:00",
+  "generated_at": "2026-05-27T21:27:21.288412-05:00",
   "slate_date": "2026-05-27",
-  "games_count": 13,
+  "games_count": 15,
   "top_picks": [
     {
-      "rank": 1,
-      "player": "Aaron Judge",
-      "team": "NYY",
-      "opponent": "BAL",
-      "pitcher": "Cade Povich (L)",
-      "ballpark": "Yankee Stadium",
-      "game_time": "7:05 PM ET",
-      "score": 92.4,
-      "odds": "+310",
-      "ev_pct": 14.2,
+      "player": "Yordan Alvarez",
+      "team": "Houston Astros",
+      "opponent": "Texas Rangers",
+      "pitcher": "Jacob deGrom (R)",
+      "ballpark": "Globe Life Field",
+      "game_time": "2026-05-28T00:05:00Z",
+      "score": 75.6,
+      "odds": "n/a",
+      "ev_pct": 0,
       "lineup_spot": 2,
       "factors": {
-        "matchup": "Crushes LHP: .312 ISO vs lefties, 17 HR in 142 PA",
-        "park": "Yankee Stadium short porch, 1.18 HR factor for RHB",
-        "weather": "78F, wind 11 mph out to RF, humidity 54%",
-        "pitcher": "Povich allows 1.82 HR/9, 2.1 HR/9 vs RHB this year",
-        "form": "5 HR in last 12 games, 94.7 mph avg exit velo last week",
-        "sentiment": "Tablesetters and TS Report both featured Judge this morning"
-      }
+        "matchup": "ISO 0.351, 20 HR in 243 PA",
+        "park": "Globe Life Field HR factor 1.07",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.98",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 1
     },
     {
-      "rank": 2,
-      "player": "Kyle Schwarber",
-      "team": "PHI",
-      "opponent": "SD",
-      "pitcher": "Randy Vasquez (R)",
-      "ballpark": "Citizens Bank Park",
-      "game_time": "6:45 PM ET",
-      "score": 88.7,
-      "odds": "+340",
-      "ev_pct": 11.8,
-      "lineup_spot": 1,
+      "player": "Brandon Lowe",
+      "team": "Pittsburgh Pirates",
+      "opponent": "Chicago Cubs",
+      "pitcher": "Jameson Taillon (R)",
+      "ballpark": "PNC Park",
+      "game_time": "2026-05-27T22:40:00Z",
+      "score": 73.3,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 2,
       "factors": {
-        "matchup": "Career .268 ISO vs RHP, leadoff = extra PA",
-        "park": "CBP 1.12 HR factor, jet stream to right when wind cooperates",
-        "weather": "82F, wind 14 mph out to RCF, dome open",
-        "pitcher": "Vasquez 4.91 ERA, 1.71 HR/9, struggles vs power LHB",
-        "form": "3 HR in last 7 games, 14.2% barrel rate season",
-        "sentiment": "TS Report flagged Schwarber as core play"
-      }
+        "matchup": "ISO 0.291, 14 HR in 220 PA",
+        "park": "PNC Park HR factor 0.94",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.85",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 2
     },
     {
-      "rank": 3,
-      "player": "Yordan Alvarez",
-      "team": "HOU",
-      "opponent": "OAK",
-      "pitcher": "JP Sears (L)",
-      "ballpark": "Daikin Park",
-      "game_time": "8:10 PM ET",
-      "score": 85.3,
-      "odds": "+360",
-      "ev_pct": 9.4,
+      "player": "Christian Walker",
+      "team": "Houston Astros",
+      "opponent": "Texas Rangers",
+      "pitcher": "Jacob deGrom (R)",
+      "ballpark": "Globe Life Field",
+      "game_time": "2026-05-28T00:05:00Z",
+      "score": 71.7,
+      "odds": "n/a",
+      "ev_pct": 0,
       "lineup_spot": 3,
       "factors": {
-        "matchup": "Has historically punished Sears, 3 HR in 14 career AB",
-        "park": "Daikin Park (Crawford Boxes) 1.09 HR factor for LHB",
-        "weather": "Roof closed, neutral conditions",
-        "pitcher": "Sears 1.94 HR/9, fly ball pitcher (44%)",
-        "form": "Back from rest, 2 HR in last 4 games",
-        "sentiment": "Mentioned by Tablesetters as value play at this price"
-      }
+        "matchup": "ISO 0.266, 15 HR in 232 PA",
+        "park": "Globe Life Field HR factor 1.07",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.98",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 3
     },
     {
-      "rank": 4,
-      "player": "Shohei Ohtani",
-      "team": "LAD",
-      "opponent": "NYM",
-      "pitcher": "Sean Manaea (L)",
-      "ballpark": "Dodger Stadium",
-      "game_time": "10:10 PM ET",
-      "score": 83.1,
-      "odds": "+295",
-      "ev_pct": 8.2,
-      "lineup_spot": 1,
+      "player": "Esmerlyn Valdez",
+      "team": "Pittsburgh Pirates",
+      "opponent": "Chicago Cubs",
+      "pitcher": "Jameson Taillon (R)",
+      "ballpark": "PNC Park",
+      "game_time": "2026-05-27T22:40:00Z",
+      "score": 67.7,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 9,
       "factors": {
-        "matchup": ".289 ISO vs LHP this season, batting leadoff",
-        "park": "Dodger Stadium neutral, slight bump in night games",
-        "weather": "68F, calm, marine layer minimal",
-        "pitcher": "Manaea 1.55 HR/9, gives up hard contact vs LHB",
-        "form": "Slumping slightly but exit velo trending up",
-        "sentiment": "Both accounts cautious due to price"
-      }
+        "matchup": "ISO 0.375, 2 HR in 18 PA",
+        "park": "PNC Park HR factor 0.94",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.85",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 4
     },
     {
-      "rank": 5,
-      "player": "Pete Alonso",
-      "team": "NYM",
-      "opponent": "LAD",
-      "pitcher": "Tyler Glasnow (R)",
-      "ballpark": "Dodger Stadium",
-      "game_time": "10:10 PM ET",
-      "score": 79.8,
-      "odds": "+420",
-      "ev_pct": 7.6,
+      "player": "Victor Mesa Jr.",
+      "team": "Tampa Bay Rays",
+      "opponent": "Baltimore Orioles",
+      "pitcher": "Trey Gibson (R)",
+      "ballpark": "Oriole Park at Camden Yards",
+      "game_time": "2026-05-27T22:35:00Z",
+      "score": 67.4,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.300, 1 HR in 12 PA",
+        "park": "Oriole Park at Camden Yards HR factor 1.00",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.49",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 5
+    },
+    {
+      "player": "Andy Pages",
+      "team": "Los Angeles Dodgers",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Tomoyuki Sugano (R)",
+      "ballpark": "UNIQLO Field at Dodger Stadium",
+      "game_time": "2026-05-28T02:10:00Z",
+      "score": 65.2,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 2,
+      "factors": {
+        "matchup": "ISO 0.234, 12 HR in 225 PA",
+        "park": "UNIQLO Field at Dodger Stadium HR factor 1.00",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.83",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 6
+    },
+    {
+      "player": "Matt Olson",
+      "team": "Atlanta Braves",
+      "opponent": "Boston Red Sox",
+      "pitcher": "Connelly Early (R)",
+      "ballpark": "Fenway Park",
+      "game_time": "2026-05-27T22:45:00Z",
+      "score": 64.9,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.287, 15 HR in 246 PA",
+        "park": "Fenway Park HR factor 1.02",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.33",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 7
+    },
+    {
+      "player": "Luke Raley",
+      "team": "Seattle Mariners",
+      "opponent": "Athletics",
+      "pitcher": "Jeffrey Springs (R)",
+      "ballpark": "Sutter Health Park",
+      "game_time": "2026-05-27T19:05:00Z",
+      "score": 64.7,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 5,
+      "factors": {
+        "matchup": "ISO 0.286, 11 HR in 153 PA",
+        "park": "Sutter Health Park HR factor 1.00",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.63",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 8
+    },
+    {
+      "player": "Mookie Betts",
+      "team": "Los Angeles Dodgers",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Tomoyuki Sugano (R)",
+      "ballpark": "UNIQLO Field at Dodger Stadium",
+      "game_time": "2026-05-28T02:10:00Z",
+      "score": 64.7,
+      "odds": "n/a",
+      "ev_pct": 0,
       "lineup_spot": 4,
       "factors": {
-        "matchup": "Alonso 4 for 11 with 2 HR career vs Glasnow",
-        "park": "Dodger Stadium night games trend up for power",
-        "weather": "68F, calm",
-        "pitcher": "Glasnow elite K but 1.42 HR/9, leaves curveballs up",
-        "form": "Bounced back from cold stretch, last 2 weeks .241 ISO",
-        "sentiment": "Tablesetters mentioned Alonso as plus EV at +420"
-      }
+        "matchup": "ISO 0.239, 6 HR in 92 PA",
+        "park": "UNIQLO Field at Dodger Stadium HR factor 1.00",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.83",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 9
     },
     {
-      "rank": 6,
-      "player": "Juan Soto",
-      "team": "NYM",
-      "opponent": "LAD",
-      "pitcher": "Tyler Glasnow (R)",
-      "ballpark": "Dodger Stadium",
-      "game_time": "10:10 PM ET",
-      "score": 77.2,
-      "odds": "+380",
-      "ev_pct": 6.1,
-      "lineup_spot": 2,
+      "player": "Max Muncy",
+      "team": "Los Angeles Dodgers",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Tomoyuki Sugano (R)",
+      "ballpark": "UNIQLO Field at Dodger Stadium",
+      "game_time": "2026-05-28T02:10:00Z",
+      "score": 64.0,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 5,
       "factors": {
-        "matchup": "Career .311 ISO vs RHP, premium plate discipline",
-        "park": "Dodger Stadium plays slightly above neutral",
-        "weather": "68F, calm",
-        "pitcher": "Glasnow 1.42 HR/9, Soto sees lots of pitches",
-        "form": "12.8% barrel rate, 2 HR in last 8 games",
-        "sentiment": "Lower confidence due to chase suppression"
-      }
-    },
-    {
-      "rank": 7,
-      "player": "Bryce Harper",
-      "team": "PHI",
-      "opponent": "SD",
-      "pitcher": "Randy Vasquez (R)",
-      "ballpark": "Citizens Bank Park",
-      "game_time": "6:45 PM ET",
-      "score": 75.6,
-      "odds": "+450",
-      "ev_pct": 5.4,
-      "lineup_spot": 3,
-      "factors": {
-        "matchup": "Harper .247 ISO vs RHP this year",
-        "park": "CBP 1.12 HR factor for LHB",
-        "weather": "82F, wind 14 mph out to RCF",
-        "pitcher": "Vasquez 1.71 HR/9, fastball heavy",
-        "form": "Coming off 3 hit game, exit velo holding 93+",
-        "sentiment": "Stack candidate with Schwarber"
-      }
-    },
-    {
-      "rank": 8,
-      "player": "Mookie Betts",
-      "team": "LAD",
-      "opponent": "NYM",
-      "pitcher": "Sean Manaea (L)",
-      "ballpark": "Dodger Stadium",
-      "game_time": "10:10 PM ET",
-      "score": 73.4,
-      "odds": "+540",
-      "ev_pct": 4.8,
-      "lineup_spot": 2,
-      "factors": {
-        "matchup": "Strong vs LHP: .234 ISO, 9 HR in 134 PA vs LHP",
-        "park": "Dodger Stadium neutral",
-        "weather": "68F, calm",
-        "pitcher": "Manaea allows hard contact, 1.55 HR/9",
-        "form": "Steady, not hot, but pitch recognition elite",
-        "sentiment": "Value at +540 per both feeds"
-      }
+        "matchup": "ISO 0.257, 12 HR in 190 PA",
+        "park": "UNIQLO Field at Dodger Stadium HR factor 1.00",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.83",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 10
     }
   ],
   "parlays": {
-    "two_leg": [
-      {
-        "name": "The Bronx + Philly Power Duo",
-        "legs": ["Aaron Judge HR", "Kyle Schwarber HR"],
-        "combined_odds": "+1750",
-        "reasoning": "Two highest-rated picks, different game windows, both face below-average pitchers in HR-friendly parks with favorable wind. Low correlation, high payout."
-      },
-      {
-        "name": "LHB vs LHP Edge Case",
-        "legs": ["Aaron Judge HR", "Yordan Alvarez HR"],
-        "combined_odds": "+1880",
-        "reasoning": "Both elite hitters with reverse splits or strong same-side numbers facing lefties they should crush. Different parks isolates risk."
-      }
-    ],
-    "three_leg": [
-      {
-        "name": "Triple Threat Sluggers",
-        "legs": ["Aaron Judge HR", "Kyle Schwarber HR", "Yordan Alvarez HR"],
-        "combined_odds": "+8200",
-        "reasoning": "Three top-rated picks across three different games. Wind and weather favorable in two of three. Lottery ticket with model edge on every leg."
-      },
-      {
-        "name": "Phillies Stack + Judge",
-        "legs": ["Aaron Judge HR", "Kyle Schwarber HR", "Bryce Harper HR"],
-        "combined_odds": "+11500",
-        "reasoning": "Correlated stack play: Harper and Schwarber in same game vs same pitcher in HR park, plus uncorrelated Judge anchor. If Vasquez gets lit up, both Phillies legs hit together."
-      }
-    ]
+    "two_leg": [],
+    "three_leg": []
   },
-  "weather_alerts": [
-    {
-      "park": "Citizens Bank Park",
-      "note": "Wind 14 mph out to RCF, ideal for LHB power"
-    },
-    {
-      "park": "Yankee Stadium",
-      "note": "Wind out to RF at 11 mph, supports RHB pull power"
-    },
-    {
-      "park": "Wrigley Field",
-      "note": "Wind blowing IN from CF at 9 mph, fade Cubs/Reds HR props"
-    }
-  ],
-  "fade_list": [
-    {
-      "player": "Marcell Ozuna",
-      "reason": "Facing Spencer Strider, 0.81 HR/9, low EV at any price"
-    },
-    {
-      "player": "Adolis Garcia",
-      "reason": "Wind blowing in at Globe Life, contact issues this week"
-    }
-  ]
+  "weather_alerts": [],
+  "fade_list": []
 }
