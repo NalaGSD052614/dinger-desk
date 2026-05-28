@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0a">
+<title>Dinger Desk · MLB HR Agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --bg-elev: #141414;
+    --bg-card: #1a1a1a;
+    --line: #2a2a2a;
+    --line-bright: #3a3a3a;
+    --ink: #f5f1e8;
+    --ink-dim: #9a9690;
+    --ink-faint: #5a5650;
+    --accent: #ff3b14;
+    --accent-soft: #ff3b1422;
+    --gold: #d4a017;
+    --green: #4ade80;
+    --red: #ef4444;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-image:
+      radial-gradient(circle at 20% 10%, #1a0500 0%, transparent 40%),
+      radial-gradient(circle at 80% 90%, #0a1a05 0%, transparent 40%),
+      var(--bg);
+    min-height: 100vh;
+  }
+
+  /* Grain overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px 80px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Header */
+  header {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 20px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(38px, 9vw, 64px);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+  }
+
+  .brand .red {
+    color: var(--accent);
+    font-style: italic;
+  }
+
+  .tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-dim);
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .meta-block {
+    text-align: right;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-dim);
+  }
+
+  .meta-block strong {
+    color: var(--ink);
+    font-size: 13px;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .slate-bar {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-dim);
+  }
+
+  .slate-bar span {
+    padding: 4px 10px;
+    background: var(--bg-elev);
+    border: 1px solid var(--line);
+  }
+
+  .slate-bar span strong {
+    color: var(--accent);
+    margin-right: 6px;
+  }
+
+  /* Section headers */
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .section-title .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    font-size: 22px;
+  }
+
+  .section-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--ink-dim);
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  /* Pick cards */
+  .picks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pick {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 18px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .pick:hover {
+    border-color: var(--line-bright);
+    border-left-color: var(--accent);
+  }
+
+  .pick.tier-2 { border-left-color: var(--gold); }
+  .pick.tier-3 { border-left-color: var(--ink-dim); }
+
+  .pick-head {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--ink-faint);
+    min-width: 36px;
+  }
+
+  .pick .rank { color: var(--accent); }
+  .pick.tier-2 .rank { color: var(--gold); }
+  .pick.tier-3 .rank { color: var(--ink-dim); }
+
+  .player-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .matchup-line {
+    font-size: 11px;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .matchup-line .team {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .pitcher-line {
+    font-size: 11px;
+    color: var(--ink-dim);
+    margin-top: 2px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+
+  .odds-block {
+    text-align: right;
+    min-width: 80px;
+  }
+
+  .odds {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: var(--green);
+    line-height: 1;
+  }
+
+  .ev {
+    font-size: 10px;
+    color: var(--ink-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+
+  .ev strong { color: var(--ink); }
+
+  /* Factors */
+  .factors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+  }
+
+  .factor {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .factor-label {
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    margin-bottom: 3px;
+  }
+
+  .factor-body {
+    color: var(--ink);
+  }
+
+  /* Score bar */
+  .score-bar {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+  }
+
+  .score-track {
+    flex: 1;
+    height: 4px;
+    background: var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .score-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+  }
+
+  .score-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    letter-spacing: 0;
+  }
+
+  /* Parlays */
+  .parlay-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    padding: 20px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .parlay-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 50%, var(--accent) 100%);
+  }
+
+  .parlay-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+
+  .parlay-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+  }
+
+  .parlay-odds {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--green);
+    line-height: 1;
+  }
+
+  .parlay-legs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .leg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: var(--bg-elev);
+    border-left: 2px solid var(--accent);
+    font-size: 13px;
+  }
+
+  .leg::before {
+    content: '+';
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .leg:first-child::before { content: '◆'; }
+
+  .parlay-reason {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-dim);
+    line-height: 1.6;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+  }
+
+  /* Weather + Fade lists */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .info-block h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+  }
+
+  .info-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 13px;
+  }
+
+  .info-item:last-child { border-bottom: none; }
+
+  .info-item strong {
+    display: block;
+    color: var(--accent);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  .fade strong { color: var(--red); }
+
+  /* Footer */
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-size: 11px;
+    color: var(--ink-faint);
+    line-height: 1.8;
+  }
+
+  footer .disclaimer {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    max-width: 500px;
+    margin: 8px auto 0;
+  }
+
+  /* Loading state */
+  .loading {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--ink-dim);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+
+  /* Tablet+ */
+  @media (min-width: 720px) {
+    .picks-grid { grid-template-columns: repeat(2, 1fr); }
+    .picks-grid .pick:first-child { grid-column: 1 / -1; }
+    .info-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 1000px) {
+    .picks-grid { grid-template-columns: repeat(3, 1fr); }
+    .picks-grid .pick:first-child { grid-column: 1 / -1; }
+  }
+
+  /* Mobile tweaks */
+  @media (max-width: 480px) {
+    .factors { grid-template-columns: 1fr; }
+    .rank { font-size: 36px; }
+    .player-info h3 { font-size: 22px; }
+    .parlay-odds { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="header-top">
+      <div>
+        <h1 class="brand">Dinger <span class="red">Desk</span></h1>
+        <div class="tagline">Daily MLB home run intelligence, before first pitch.</div>
+      </div>
+      <div class="meta-block">
+        Slate
+        <strong id="slate-date">—</strong>
+        <div style="margin-top: 8px;">Updated</div>
+        <strong id="updated-at">—</strong>
+      </div>
+    </div>
+    <div class="slate-bar">
+      <span><strong id="games-count">—</strong> games on the board</span>
+      <span><strong>5</strong> factor model: matchup · park · weather · pitcher · form</span>
+      <span><strong>X</strong> handicapper sentiment layer active</span>
+    </div>
+  </header>
+
+  <div id="content">
+    <div class="loading">Loading the slate...</div>
+  </div>
+
+  <footer>
+    <div>DINGER DESK · MLB HR PROP AGENT · BUILT FOR JOHN</div>
+    <div class="disclaimer">These are model-generated educational projections, not financial advice. Bet responsibly and within your means. If gambling is a problem, call 1-800-GAMBLER.</div>
+  </footer>
+</div>
+
+<script>
+async function load() {
+  try {
+    const res = await fetch('data/picks.json?_=' + Date.now());
+    const d = await res.json();
+    render(d);
+  } catch (err) {
+    document.getElementById('content').innerHTML = '<div class="loading">Could not load picks. Check that data/picks.json exists.</div>';
+    console.error(err);
+  }
+}
+
+function render(d) {
+  document.getElementById('slate-date').textContent = formatDate(d.slate_date);
+  document.getElementById('updated-at').textContent = formatTime(d.generated_at);
+  document.getElementById('games-count').textContent = d.games_count;
+
+  const html = [];
+
+  // Top picks
+  html.push(`
+    <section class="section">
+      <h2 class="section-title"><span class="num">01</span> Top HR Picks</h2>
+      <p class="section-sub">Ranked by composite model score. Tier 1 (red) = highest confidence, Tier 2 (gold) = solid play, Tier 3 (gray) = leverage/contrarian.</p>
+      <div class="picks-grid">
+        ${d.top_picks.map(p => pickCard(p)).join('')}
+      </div>
+    </section>
+  `);
+
+  // Parlays
+  html.push(`
+    <section class="section">
+      <h2 class="section-title"><span class="num">02</span> Suggested Parlays</h2>
+      <p class="section-sub">Combinations balancing payout, leg correlation, and model edge. Two leg = higher hit rate. Three leg = lottery with edge.</p>
+      ${d.parlays.two_leg.map(p => parlayCard(p)).join('')}
+      ${d.parlays.three_leg.map(p => parlayCard(p)).join('')}
+    </section>
+  `);
+
+  // Info grid
+  html.push(`
+    <section class="section">
+      <h2 class="section-title"><span class="num">03</span> Slate Conditions</h2>
+      <p class="section-sub">Weather alerts and fade list. Reference these before locking anything in.</p>
+      <div class="info-grid">
+        <div class="info-block">
+          <h4>Weather Watch</h4>
+          ${d.weather_alerts.map(w => `
+            <div class="info-item">
+              <strong>${w.park}</strong>
+              ${w.note}
+            </div>
+          `).join('')}
+        </div>
+        <div class="info-block">
+          <h4>Fade List</h4>
+          ${d.fade_list.map(f => `
+            <div class="info-item fade">
+              <strong>${f.player}</strong>
+              ${f.reason}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  `);
+
+  document.getElementById('content').innerHTML = html.join('');
+}
+
+function pickCard(p) {
+  const tier = p.score >= 85 ? '' : (p.score >= 78 ? 'tier-2' : 'tier-3');
+  return `
+    <article class="pick ${tier}">
+      <div class="pick-head">
+        <div class="rank">${String(p.rank).padStart(2, '0')}</div>
+        <div class="player-info">
+          <h3>${p.player}</h3>
+          <div class="matchup-line"><span class="team">${p.team}</span> vs ${p.opponent} · ${p.game_time}</div>
+          <div class="pitcher-line">${p.pitcher} · ${p.ballpark} · Bat ${p.lineup_spot}</div>
+        </div>
+        <div class="odds-block">
+          <div class="odds">${p.odds}</div>
+          <div class="ev">EV <strong>+${p.ev_pct}%</strong></div>
+        </div>
+      </div>
+      <div class="factors">
+        <div class="factor"><span class="factor-label">Pitcher</span><span class="factor-body">${p.factors.pitcher}</span></div>
+        <div class="factor"><span class="factor-label">Park</span><span class="factor-body">${p.factors.park}</span></div>
+        <div class="factor"><span class="factor-label">Weather</span><span class="factor-body">${p.factors.weather}</span></div>
+        <div class="factor"><span class="factor-label">Matchup</span><span class="factor-body">${p.factors.matchup}</span></div>
+        <div class="factor"><span class="factor-label">Form</span><span class="factor-body">${p.factors.form}</span></div>
+        <div class="factor"><span class="factor-label">Sentiment</span><span class="factor-body">${p.factors.sentiment}</span></div>
+      </div>
+      <div class="score-bar">
+        <span>SCORE</span>
+        <div class="score-track"><div class="score-fill" style="width: ${p.score}%"></div></div>
+        <span class="score-num">${p.score.toFixed(1)}</span>
+      </div>
+    </article>
+  `;
+}
+
+function parlayCard(p) {
+  return `
+    <div class="parlay-card">
+      <div class="parlay-head">
+        <div class="parlay-name">${p.name}</div>
+        <div class="parlay-odds">${p.combined_odds}</div>
+      </div>
+      <div class="parlay-legs">
+        ${p.legs.map(l => `<div class="leg">${l}</div>`).join('')}
+      </div>
+      <div class="parlay-reason">${p.reasoning}</div>
+    </div>
+  `;
+}
+
+function formatDate(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }).toUpperCase();
+}
+
+function formatTime(iso) {
+  const d = new Date(iso);
+  return d.toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).toUpperCase();
+}
+
+load();
+</script>
+</body>
+</html>

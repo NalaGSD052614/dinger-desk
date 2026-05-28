@@ -1,0 +1,44 @@
+name: Generate Daily Picks
+
+on:
+  schedule:
+    # 14:00 UTC = 9:00 AM Central Time (CDT). Adjust if needed.
+    - cron: '0 14 * * *'
+  workflow_dispatch:  # allows manual trigger from Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Generate picks
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/generate_picks.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "Dinger Desk Bot"
+          git config user.email "actions@github.com"
+          git add data/picks.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Daily picks update $(date -u +%Y-%m-%d)"
+            git push
+          fi
