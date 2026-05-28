@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T17:46:15.622938-05:00",
+  "generated_at": "2026-05-28T18:55:03.407056-05:00",
   "slate_date": "2026-05-28",
   "games_count": 6,
   "top_picks": [
@@ -88,27 +88,6 @@
       "rank": 4
     },
     {
-      "player": "Brandon Lowe",
-      "team": "Pittsburgh Pirates",
-      "opponent": "Chicago Cubs",
-      "pitcher": "Colin Rea (R)",
-      "ballpark": "PNC Park",
-      "game_time": "2026-05-28T22:40:00Z",
-      "score": 63.5,
-      "odds": "n/a",
-      "ev_pct": 0,
-      "lineup_spot": 2,
-      "factors": {
-        "matchup": "ISO 0.291, 14 HR in 220 PA",
-        "park": "PNC Park HR factor 0.94",
-        "weather": "Live weather pending",
-        "pitcher": "HR/9 1.33",
-        "form": "Pull last 14 day Savant splits",
-        "sentiment": "X feed parse pending"
-      },
-      "rank": 5
-    },
-    {
       "player": "Jose Siri",
       "team": "Los Angeles Angels",
       "opponent": "Detroit Tigers",
@@ -124,6 +103,27 @@
         "park": "Comerica Park HR factor 1.00",
         "weather": "Live weather pending",
         "pitcher": "HR/9 1.38",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 5
+    },
+    {
+      "player": "Brandon Lowe",
+      "team": "Pittsburgh Pirates",
+      "opponent": "Chicago Cubs",
+      "pitcher": "Colin Rea (R)",
+      "ballpark": "PNC Park",
+      "game_time": "2026-05-28T22:40:00Z",
+      "score": 62.2,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 2,
+      "factors": {
+        "matchup": "ISO 0.289, 14 HR in 222 PA",
+        "park": "PNC Park HR factor 0.94",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.24",
         "form": "Pull last 14 day Savant splits",
         "sentiment": "X feed parse pending"
       },
