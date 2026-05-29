@@ -18,6 +18,7 @@ import json
 import os
 import sys
 import math
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -157,35 +158,103 @@ def fetch_weather(lat, lon):
     except Exception:
         return None
 
+def normalize_name(name):
+    """
+    Normalize a player name for matching across APIs.
+    Strips accents, lowercases, removes punctuation and common suffixes.
+    'Yordan Álvarez' and 'Yordan Alvarez Jr.' both become 'yordan alvarez'.
+    """
+    if not name:
+        return ""
+    # Strip accents
+    nfkd = unicodedata.normalize("NFKD", name)
+    ascii_name = "".join(c for c in nfkd if not unicodedata.combining(c))
+    ascii_name = ascii_name.lower().strip()
+    # Remove suffixes and punctuation
+    for suffix in (" jr", " jr.", " sr", " sr.", " ii", " iii", " iv"):
+        if ascii_name.endswith(suffix):
+            ascii_name = ascii_name[: -len(suffix)]
+    ascii_name = ascii_name.replace(".", "").replace(",", "").replace("'", "")
+    # Collapse whitespace
+    ascii_name = " ".join(ascii_name.split())
+    return ascii_name
+
+
 def fetch_hr_odds():
-    """Pull HR prop odds from The Odds API. Requires free API key."""
+    """
+    Pull HR prop odds from The Odds API.
+
+    Player props (batter_home_runs) are NOT available on the main /odds endpoint.
+    They must be fetched per event via /events/{eventId}/odds. So we:
+      1. Hit the /events endpoint to list today's MLB event IDs (free, no quota cost)
+      2. Loop each event and request the batter_home_runs market for it
+      3. Collect the best (longest) "Over 0.5" / "Yes" price per player
+
+    Returns a dict keyed by NORMALIZED player name -> American odds (int).
+    """
     if not ODDS_API_KEY:
+        print("No ODDS_API_KEY set, skipping odds.", file=sys.stderr)
         return {}
-    url = "https://api.the-odds-api.com/v4/sports/baseball_mlb/odds"
-    params = {
-        "apiKey": ODDS_API_KEY,
-        "regions": "us",
-        "markets": "batter_home_runs",
-        "oddsFormat": "american",
-    }
+
+    base = "https://api.the-odds-api.com/v4/sports/baseball_mlb"
+
+    # Step 1: list events (this call does not count against quota)
     try:
-        r = requests.get(url, params=params, timeout=20)
-        r.raise_for_status()
-        out = {}
-        for game in r.json():
-            for bm in game.get("bookmakers", []):
-                for mkt in bm.get("markets", []):
-                    if mkt["key"] == "batter_home_runs":
-                        for outcome in mkt.get("outcomes", []):
-                            if outcome.get("name") == "Yes":
-                                name = outcome.get("description", "")
-                                price = outcome.get("price")
-                                if name and name not in out:
-                                    out[name] = price
-        return out
+        ev = requests.get(
+            f"{base}/events",
+            params={"apiKey": ODDS_API_KEY},
+            timeout=20,
+        )
+        ev.raise_for_status()
+        events = ev.json()
     except Exception as e:
-        print(f"Odds fetch failed: {e}", file=sys.stderr)
+        print(f"Events fetch failed: {e}", file=sys.stderr)
         return {}
+
+    out = {}
+    for event in events:
+        event_id = event.get("id")
+        if not event_id:
+            continue
+        try:
+            r = requests.get(
+                f"{base}/events/{event_id}/odds",
+                params={
+                    "apiKey": ODDS_API_KEY,
+                    "regions": "us",
+                    "markets": "batter_home_runs",
+                    "oddsFormat": "american",
+                },
+                timeout=20,
+            )
+            # Some events have no props posted yet -> 404/422, skip quietly
+            if r.status_code != 200:
+                continue
+            data = r.json()
+        except Exception as e:
+            print(f"  Event {event_id} odds failed: {e}", file=sys.stderr)
+            continue
+
+        for bm in data.get("bookmakers", []):
+            for mkt in bm.get("markets", []):
+                if mkt.get("key") != "batter_home_runs":
+                    continue
+                for outcome in mkt.get("outcomes", []):
+                    # "To hit a home run" markets use name "Over" or "Yes"
+                    oname = outcome.get("name", "")
+                    if oname not in ("Over", "Yes"):
+                        continue
+                    player = outcome.get("description", "")
+                    price = outcome.get("price")
+                    if not player or price is None:
+                        continue
+                    key = normalize_name(player)
+                    # Keep the longest (best) price across books
+                    if key not in out or price > out[key]:
+                        out[key] = price
+
+    print(f"  Collected HR odds for {len(out)} players across {len(events)} events", file=sys.stderr)
+    return out
 
 # ============================================================
 # SENTIMENT LAYER (Twitter/X handicappers)
@@ -412,7 +481,7 @@ def main():
 
                 weather = None  # plug in fetch_weather(lat, lon) using venue lat/lon lookup
                 score = score_hitter(hitter, pitcher_stats, park_factor, weather, sentiment)
-                odds = odds_map.get(hitter["name"])
+                odds = odds_map.get(normalize_name(hitter["name"]))
                 model_p = model_prob_from_score(score)
                 ev = calc_ev(model_p, odds)
 
@@ -457,5 +526,16 @@ def main():
         json.dump(output, f, indent=2)
     print(f"[Dinger Desk] Wrote {len(top_picks)} picks to {OUTPUT_PATH}", file=sys.stderr)
 
+    # Archive a dated snapshot so the results tracker can grade it next day.
+    # The 3 PM run is the authoritative slate (lineups + odds posted), so it
+    # overwrites earlier same-day archives. This is intentional.
+    archive_dir = OUTPUT_PATH.parent / "history"
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    archive_path = archive_dir / f"{date_str}.json"
+    with open(archive_path, "w") as f:
+        json.dump(output, f, indent=2)
+    print(f"[Dinger Desk] Archived snapshot to {archive_path}", file=sys.stderr)
+
 if __name__ == "__main__":
     main()
+  
