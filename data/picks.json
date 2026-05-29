@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T19:14:16.393061-05:00",
+  "generated_at": "2026-05-28T19:15:15.484477-05:00",
   "slate_date": "2026-05-28",
   "games_count": 6,
   "top_picks": [
@@ -10,15 +10,15 @@
       "pitcher": "Nathan Eovaldi (R)",
       "ballpark": "Globe Life Field",
       "game_time": "2026-05-29T00:05:00Z",
-      "score": 73.2,
+      "score": 71.5,
       "odds": "+255",
-      "ev_pct": -8.1,
+      "ev_pct": -8.4,
       "lineup_spot": 2,
       "factors": {
         "matchup": "ISO 0.351, 20 HR in 244 PA",
         "park": "Globe Life Field HR factor 1.07",
         "weather": "Live weather pending",
-        "pitcher": "HR/9 1.76",
+        "pitcher": "HR/9 1.62",
         "form": "Pull last 14 day Savant splits",
         "sentiment": "X feed parse pending"
       },
@@ -172,27 +172,6 @@
       "rank": 8
     },
     {
-      "player": "Braden Shewmake",
-      "team": "Houston Astros",
-      "opponent": "Texas Rangers",
-      "pitcher": "Nathan Eovaldi (R)",
-      "ballpark": "Globe Life Field",
-      "game_time": "2026-05-29T00:05:00Z",
-      "score": 57.9,
-      "odds": "+800",
-      "ev_pct": 5.6,
-      "lineup_spot": 6,
-      "factors": {
-        "matchup": "ISO 0.182, 3 HR in 70 PA",
-        "park": "Globe Life Field HR factor 1.07",
-        "weather": "Live weather pending",
-        "pitcher": "HR/9 1.76",
-        "form": "Pull last 14 day Savant splits",
-        "sentiment": "X feed parse pending"
-      },
-      "rank": 9
-    },
-    {
       "player": "Dillon Dingler",
       "team": "Detroit Tigers",
       "opponent": "Los Angeles Angels",
@@ -208,6 +187,27 @@
         "park": "Comerica Park HR factor 1.00",
         "weather": "Live weather pending",
         "pitcher": "HR/9 1.28",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 9
+    },
+    {
+      "player": "Zach Neto",
+      "team": "Los Angeles Angels",
+      "opponent": "Detroit Tigers",
+      "pitcher": "Jack Flaherty (R)",
+      "ballpark": "Comerica Park",
+      "game_time": "2026-05-28T17:10:00Z",
+      "score": 57.4,
+      "odds": "n/a",
+      "ev_pct": 0,
+      "lineup_spot": 1,
+      "factors": {
+        "matchup": "ISO 0.202, 10 HR in 261 PA",
+        "park": "Comerica Park HR factor 1.00",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.38",
         "form": "Pull last 14 day Savant splits",
         "sentiment": "X feed parse pending"
       },
