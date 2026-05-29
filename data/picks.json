@@ -1,11 +1,243 @@
 {
-  "generated_at": "2026-05-29T12:12:50.228739-05:00",
+  "generated_at": "2026-05-29T17:18:30.863434-05:00",
   "slate_date": "2026-05-29",
   "games_count": 15,
-  "top_picks": [],
+  "top_picks": [
+    {
+      "player": "Casey Schmitt",
+      "team": "San Francisco Giants",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Michael Lorenzen (R)",
+      "ballpark": "Coors Field",
+      "game_time": "2026-05-30T00:40:00Z",
+      "score": 76.3,
+      "odds": "+390",
+      "ev_pct": 0.4,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.264, 12 HR in 196 PA",
+        "park": "Coors Field HR factor 1.34",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.69",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 1
+    },
+    {
+      "player": "JJ Bleday",
+      "team": "Cincinnati Reds",
+      "opponent": "Atlanta Braves",
+      "pitcher": "Grant Holmes (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-29T22:40:00Z",
+      "score": 75.2,
+      "odds": "+340",
+      "ev_pct": -2.2,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.295, 7 HR in 116 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.55",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 2
+    },
+    {
+      "player": "Matt Olson",
+      "team": "Atlanta Braves",
+      "opponent": "Cincinnati Reds",
+      "pitcher": "Chris Paddack (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-29T22:40:00Z",
+      "score": 71.9,
+      "odds": "+300",
+      "ev_pct": -5.2,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.286, 15 HR in 251 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.34",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 3
+    },
+    {
+      "player": "Nathaniel Lowe",
+      "team": "Cincinnati Reds",
+      "opponent": "Atlanta Braves",
+      "pitcher": "Grant Holmes (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-29T22:40:00Z",
+      "score": 70.9,
+      "odds": "+460",
+      "ev_pct": 1.7,
+      "lineup_spot": 6,
+      "factors": {
+        "matchup": "ISO 0.282, 8 HR in 132 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.55",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 4
+    },
+    {
+      "player": "Elly De La Cruz",
+      "team": "Cincinnati Reds",
+      "opponent": "Atlanta Braves",
+      "pitcher": "Grant Holmes (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-29T22:40:00Z",
+      "score": 69.2,
+      "odds": "+400",
+      "ev_pct": -0.8,
+      "lineup_spot": 2,
+      "factors": {
+        "matchup": "ISO 0.230, 12 HR in 246 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.55",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 5
+    },
+    {
+      "player": "Willy Adames",
+      "team": "San Francisco Giants",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Michael Lorenzen (R)",
+      "ballpark": "Coors Field",
+      "game_time": "2026-05-30T00:40:00Z",
+      "score": 68.9,
+      "odds": "+410",
+      "ev_pct": -0.4,
+      "lineup_spot": 1,
+      "factors": {
+        "matchup": "ISO 0.180, 7 HR in 234 PA",
+        "park": "Coors Field HR factor 1.34",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.69",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 6
+    },
+    {
+      "player": "Dillon Dingler",
+      "team": "Detroit Tigers",
+      "opponent": "Chicago White Sox",
+      "pitcher": "Erick Fedde (R)",
+      "ballpark": "Rate Field",
+      "game_time": "2026-05-29T23:40:00Z",
+      "score": 68.5,
+      "odds": "+525",
+      "ev_pct": 3.1,
+      "lineup_spot": 2,
+      "factors": {
+        "matchup": "ISO 0.225, 10 HR in 208 PA",
+        "park": "Rate Field HR factor 1.00",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.20",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 7
+    },
+    {
+      "player": "Michael Harris II",
+      "team": "Atlanta Braves",
+      "opponent": "Cincinnati Reds",
+      "pitcher": "Chris Paddack (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-29T22:40:00Z",
+      "score": 67.1,
+      "odds": "+290",
+      "ev_pct": -6.9,
+      "lineup_spot": 2,
+      "factors": {
+        "matchup": "ISO 0.233, 13 HR in 202 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.34",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 8
+    },
+    {
+      "player": "Sal Stewart",
+      "team": "Cincinnati Reds",
+      "opponent": "Atlanta Braves",
+      "pitcher": "Grant Holmes (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-29T22:40:00Z",
+      "score": 66.9,
+      "odds": "+400",
+      "ev_pct": -1.3,
+      "lineup_spot": 4,
+      "factors": {
+        "matchup": "ISO 0.217, 12 HR in 241 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.55",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 9
+    },
+    {
+      "player": "Rafael Devers",
+      "team": "San Francisco Giants",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Michael Lorenzen (R)",
+      "ballpark": "Coors Field",
+      "game_time": "2026-05-30T00:40:00Z",
+      "score": 66.1,
+      "odds": "+320",
+      "ev_pct": -5.3,
+      "lineup_spot": 4,
+      "factors": {
+        "matchup": "ISO 0.167, 7 HR in 231 PA",
+        "park": "Coors Field HR factor 1.34",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.69",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 10
+    }
+  ],
   "parlays": {
-    "two_leg": [],
-    "three_leg": []
+    "two_leg": [
+      {
+        "name": "Top 2 Anchors",
+        "legs": [
+          "Casey Schmitt HR",
+          "JJ Bleday HR"
+        ],
+        "combined_odds": "+2056",
+        "reasoning": "Two highest-scored picks: Casey Schmitt (76.3) and JJ Bleday (75.2). Different games reduce correlation."
+      }
+    ],
+    "three_leg": [
+      {
+        "name": "Triple Threat",
+        "legs": [
+          "Casey Schmitt HR",
+          "JJ Bleday HR",
+          "Matt Olson HR"
+        ],
+        "combined_odds": "+8524",
+        "reasoning": "Three highest-scored picks. Lottery payout, model edge on every leg."
+      }
+    ]
   },
   "weather_alerts": [],
   "fade_list": []
