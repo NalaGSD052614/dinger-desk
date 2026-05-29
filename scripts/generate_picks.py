@@ -240,16 +240,24 @@ def fetch_hr_odds():
                 if mkt.get("key") != "batter_home_runs":
                     continue
                 for outcome in mkt.get("outcomes", []):
-                    # "To hit a home run" markets use name "Over" or "Yes"
-                    oname = outcome.get("name", "")
-                    if oname not in ("Over", "Yes"):
+                    # The standard "to hit a home run" prop is Over at point 0.5.
+                    # Alternate lines (point 1.5 = "2+ HR", 2.5 = "3+ HR") carry
+                    # huge odds like +14000 and must be excluded.
+                    if outcome.get("name") != "Over":
                         continue
+                    point = outcome.get("point")
+                    if point is not None and abs(point - 0.5) > 0.01:
+                        continue  # skip alternate milestone lines
                     player = outcome.get("description", "")
                     price = outcome.get("price")
                     if not player or price is None:
                         continue
+                    # Sanity guard: a real "anytime HR" prop is roughly -250 to +900.
+                    # Anything longer than +1200 is almost certainly a bad/alt line.
+                    if price > 1200:
+                        continue
                     key = normalize_name(player)
-                    # Keep the longest (best) price across books
+                    # Keep the best (highest payout) valid price across books
                     if key not in out or price > out[key]:
                         out[key] = price
 
