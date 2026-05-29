@@ -253,8 +253,8 @@ def fetch_hr_odds():
                     if not player or price is None:
                         continue
                     # Sanity guard: a real "anytime HR" prop is roughly -250 to +900.
-                    # Anything longer than +1200 is almost certainly a bad/alt line.
-                    if price > 1200:
+                    # Anything longer than +900 is almost certainly a bad/alt line.
+                    if price > 900:
                         continue
                     key = normalize_name(player)
                     # Keep the best (highest payout) valid price across books
@@ -546,4 +546,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-  
