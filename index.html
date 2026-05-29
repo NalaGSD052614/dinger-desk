@@ -598,7 +598,7 @@ function pickCard(p) {
         </div>
         <div class="odds-block">
           <div class="odds">${p.odds}</div>
-          <div class="ev">EV <strong>+${p.ev_pct}%</strong></div>
+          <div class="ev">EV <strong>${p.ev_pct >= 0 ? '+' : ''}${p.ev_pct}%</strong></div>
         </div>
       </div>
       <div class="factors">
