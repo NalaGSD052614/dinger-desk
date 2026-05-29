@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T18:55:03.407056-05:00",
+  "generated_at": "2026-05-28T19:05:00.153579-05:00",
   "slate_date": "2026-05-28",
   "games_count": 6,
   "top_picks": [
@@ -11,8 +11,8 @@
       "ballpark": "Globe Life Field",
       "game_time": "2026-05-29T00:05:00Z",
       "score": 71.5,
-      "odds": "n/a",
-      "ev_pct": 0,
+      "odds": "+14000",
+      "ev_pct": 19.0,
       "lineup_spot": 2,
       "factors": {
         "matchup": "ISO 0.351, 20 HR in 244 PA",
@@ -116,8 +116,8 @@
       "ballpark": "PNC Park",
       "game_time": "2026-05-28T22:40:00Z",
       "score": 62.2,
-      "odds": "n/a",
-      "ev_pct": 0,
+      "odds": "+12000",
+      "ev_pct": 16.9,
       "lineup_spot": 2,
       "factors": {
         "matchup": "ISO 0.289, 14 HR in 222 PA",
