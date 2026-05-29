@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T19:05:00.153579-05:00",
+  "generated_at": "2026-05-28T19:10:32.800001-05:00",
   "slate_date": "2026-05-28",
   "games_count": 6,
   "top_picks": [
@@ -11,8 +11,8 @@
       "ballpark": "Globe Life Field",
       "game_time": "2026-05-29T00:05:00Z",
       "score": 71.5,
-      "odds": "+14000",
-      "ev_pct": 19.0,
+      "odds": "+235",
+      "ev_pct": -10.1,
       "lineup_spot": 2,
       "factors": {
         "matchup": "ISO 0.351, 20 HR in 244 PA",
@@ -115,15 +115,15 @@
       "pitcher": "Colin Rea (R)",
       "ballpark": "PNC Park",
       "game_time": "2026-05-28T22:40:00Z",
-      "score": 62.2,
-      "odds": "+12000",
-      "ev_pct": 16.9,
+      "score": 61.8,
+      "odds": "+1100",
+      "ev_pct": 9.3,
       "lineup_spot": 2,
       "factors": {
-        "matchup": "ISO 0.289, 14 HR in 222 PA",
+        "matchup": "ISO 0.287, 14 HR in 223 PA",
         "park": "PNC Park HR factor 0.94",
         "weather": "Live weather pending",
-        "pitcher": "HR/9 1.24",
+        "pitcher": "HR/9 1.22",
         "form": "Pull last 14 day Savant splits",
         "sentiment": "X feed parse pending"
       },
