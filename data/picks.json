@@ -1,11 +1,243 @@
 {
-  "generated_at": "2026-05-30T08:33:58.596044-05:00",
+  "generated_at": "2026-05-30T15:16:48.446570-05:00",
   "slate_date": "2026-05-30",
   "games_count": 15,
-  "top_picks": [],
+  "top_picks": [
+    {
+      "player": "Matt Olson",
+      "team": "Atlanta Braves",
+      "opponent": "Cincinnati Reds",
+      "pitcher": "Brady Singer (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-30T23:15:00Z",
+      "score": 80.9,
+      "odds": "+275",
+      "ev_pct": -4.9,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.279, 15 HR in 256 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.74",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 1
+    },
+    {
+      "player": "Michael Harris II",
+      "team": "Atlanta Braves",
+      "opponent": "Cincinnati Reds",
+      "pitcher": "Brady Singer (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-30T23:15:00Z",
+      "score": 76.2,
+      "odds": "+310",
+      "ev_pct": -3.6,
+      "lineup_spot": 2,
+      "factors": {
+        "matchup": "ISO 0.227, 13 HR in 207 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.74",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 2
+    },
+    {
+      "player": "Yordan Alvarez",
+      "team": "Houston Astros",
+      "opponent": "Milwaukee Brewers",
+      "pitcher": "Brandon Sproat (R)",
+      "ballpark": "Daikin Park",
+      "game_time": "2026-05-30T20:10:00Z",
+      "score": 74.5,
+      "odds": "+300",
+      "ev_pct": -4.6,
+      "lineup_spot": 2,
+      "factors": {
+        "matchup": "ISO 0.340, 20 HR in 253 PA",
+        "park": "Daikin Park HR factor 1.09",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.83",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 3
+    },
+    {
+      "player": "Christian Walker",
+      "team": "Houston Astros",
+      "opponent": "Milwaukee Brewers",
+      "pitcher": "Brandon Sproat (R)",
+      "ballpark": "Daikin Park",
+      "game_time": "2026-05-30T20:10:00Z",
+      "score": 69.8,
+      "odds": "+425",
+      "ev_pct": 0.3,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.258, 15 HR in 238 PA",
+        "park": "Daikin Park HR factor 1.09",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.83",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 4
+    },
+    {
+      "player": "Ozzie Albies",
+      "team": "Atlanta Braves",
+      "opponent": "Cincinnati Reds",
+      "pitcher": "Brady Singer (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-30T23:15:00Z",
+      "score": 68.5,
+      "odds": "+420",
+      "ev_pct": -0.2,
+      "lineup_spot": 4,
+      "factors": {
+        "matchup": "ISO 0.160, 9 HR in 251 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.74",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 5
+    },
+    {
+      "player": "Ronald Acu\u00f1a Jr.",
+      "team": "Atlanta Braves",
+      "opponent": "Cincinnati Reds",
+      "pitcher": "Brady Singer (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-30T23:15:00Z",
+      "score": 68.1,
+      "odds": "+340",
+      "ev_pct": -3.7,
+      "lineup_spot": 1,
+      "factors": {
+        "matchup": "ISO 0.141, 4 HR in 198 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.74",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 6
+    },
+    {
+      "player": "Dominic Smith",
+      "team": "Atlanta Braves",
+      "opponent": "Cincinnati Reds",
+      "pitcher": "Brady Singer (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-30T23:15:00Z",
+      "score": 67.7,
+      "odds": "+400",
+      "ev_pct": -1.1,
+      "lineup_spot": 5,
+      "factors": {
+        "matchup": "ISO 0.177, 5 HR in 128 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.74",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 7
+    },
+    {
+      "player": "JJ Bleday",
+      "team": "Cincinnati Reds",
+      "opponent": "Atlanta Braves",
+      "pitcher": "Mart\u00edn P\u00e9rez (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-30T23:15:00Z",
+      "score": 66.1,
+      "odds": "+350",
+      "ev_pct": -3.7,
+      "lineup_spot": 6,
+      "factors": {
+        "matchup": "ISO 0.317, 8 HR in 120 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 0.97",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 8
+    },
+    {
+      "player": "Brandon Lowe",
+      "team": "Pittsburgh Pirates",
+      "opponent": "Minnesota Twins",
+      "pitcher": "Bailey Ober (R)",
+      "ballpark": "PNC Park",
+      "game_time": "2026-05-30T20:05:00Z",
+      "score": 63.5,
+      "odds": "+410",
+      "ev_pct": -1.6,
+      "lineup_spot": 2,
+      "factors": {
+        "matchup": "ISO 0.278, 14 HR in 230 PA",
+        "park": "PNC Park HR factor 0.94",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.45",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 9
+    },
+    {
+      "player": "Mauricio Dub\u00f3n",
+      "team": "Atlanta Braves",
+      "opponent": "Cincinnati Reds",
+      "pitcher": "Brady Singer (R)",
+      "ballpark": "Great American Ball Park",
+      "game_time": "2026-05-30T23:15:00Z",
+      "score": 62.4,
+      "odds": "+575",
+      "ev_pct": 2.9,
+      "lineup_spot": 6,
+      "factors": {
+        "matchup": "ISO 0.124, 3 HR in 217 PA",
+        "park": "Great American Ball Park HR factor 1.25",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.74",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 10
+    }
+  ],
   "parlays": {
-    "two_leg": [],
-    "three_leg": []
+    "two_leg": [
+      {
+        "name": "Top 2 Anchors",
+        "legs": [
+          "Matt Olson HR",
+          "Michael Harris II HR"
+        ],
+        "combined_odds": "+1437",
+        "reasoning": "Two highest-scored picks: Matt Olson (80.9) and Michael Harris II (76.2). Different games reduce correlation."
+      }
+    ],
+    "three_leg": [
+      {
+        "name": "Triple Threat",
+        "legs": [
+          "Matt Olson HR",
+          "Michael Harris II HR",
+          "Yordan Alvarez HR"
+        ],
+        "combined_odds": "+6050",
+        "reasoning": "Three highest-scored picks. Lottery payout, model edge on every leg."
+      }
+    ]
   },
   "weather_alerts": [],
   "fade_list": []
