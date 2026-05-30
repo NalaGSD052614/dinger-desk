@@ -1,8 +1,29 @@
 {
-  "generated_at": "2026-05-30T15:16:48.446570-05:00",
+  "generated_at": "2026-05-30T17:39:18.877793-05:00",
   "slate_date": "2026-05-30",
   "games_count": 15,
   "top_picks": [
+    {
+      "player": "Casey Schmitt",
+      "team": "San Francisco Giants",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Ryan Feltner (R)",
+      "ballpark": "Coors Field",
+      "game_time": "2026-05-31T01:10:00Z",
+      "score": 81.9,
+      "odds": "+450",
+      "ev_pct": 3.8,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.262, 12 HR in 201 PA",
+        "park": "Coors Field HR factor 1.34",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.25",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 1
+    },
     {
       "player": "Matt Olson",
       "team": "Atlanta Braves",
@@ -22,7 +43,28 @@
         "form": "Pull last 14 day Savant splits",
         "sentiment": "X feed parse pending"
       },
-      "rank": 1
+      "rank": 2
+    },
+    {
+      "player": "Eric Haase",
+      "team": "San Francisco Giants",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Ryan Feltner (R)",
+      "ballpark": "Coors Field",
+      "game_time": "2026-05-31T01:10:00Z",
+      "score": 79.7,
+      "odds": "+550",
+      "ev_pct": 6.1,
+      "lineup_spot": 8,
+      "factors": {
+        "matchup": "ISO 0.379, 3 HR in 30 PA",
+        "park": "Coors Field HR factor 1.34",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.25",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 3
     },
     {
       "player": "Michael Harris II",
@@ -43,7 +85,7 @@
         "form": "Pull last 14 day Savant splits",
         "sentiment": "X feed parse pending"
       },
-      "rank": 2
+      "rank": 4
     },
     {
       "player": "Yordan Alvarez",
@@ -52,19 +94,82 @@
       "pitcher": "Brandon Sproat (R)",
       "ballpark": "Daikin Park",
       "game_time": "2026-05-30T20:10:00Z",
-      "score": 74.5,
-      "odds": "+300",
-      "ev_pct": -4.6,
+      "score": 74.6,
+      "odds": "n/a",
+      "ev_pct": 0,
       "lineup_spot": 2,
       "factors": {
-        "matchup": "ISO 0.340, 20 HR in 253 PA",
+        "matchup": "ISO 0.338, 20 HR in 257 PA",
         "park": "Daikin Park HR factor 1.09",
         "weather": "Live weather pending",
-        "pitcher": "HR/9 1.83",
+        "pitcher": "HR/9 1.84",
         "form": "Pull last 14 day Savant splits",
         "sentiment": "X feed parse pending"
       },
-      "rank": 3
+      "rank": 5
+    },
+    {
+      "player": "Willy Adames",
+      "team": "San Francisco Giants",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Ryan Feltner (R)",
+      "ballpark": "Coors Field",
+      "game_time": "2026-05-31T01:10:00Z",
+      "score": 74.4,
+      "odds": "+360",
+      "ev_pct": -1.4,
+      "lineup_spot": 1,
+      "factors": {
+        "matchup": "ISO 0.177, 7 HR in 239 PA",
+        "park": "Coors Field HR factor 1.34",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.25",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 6
+    },
+    {
+      "player": "Rafael Devers",
+      "team": "San Francisco Giants",
+      "opponent": "Colorado Rockies",
+      "pitcher": "Ryan Feltner (R)",
+      "ballpark": "Coors Field",
+      "game_time": "2026-05-31T01:10:00Z",
+      "score": 72.5,
+      "odds": "+310",
+      "ev_pct": -4.4,
+      "lineup_spot": 4,
+      "factors": {
+        "matchup": "ISO 0.173, 7 HR in 236 PA",
+        "park": "Coors Field HR factor 1.34",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 2.25",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 7
+    },
+    {
+      "player": "Hunter Goodman",
+      "team": "Colorado Rockies",
+      "opponent": "San Francisco Giants",
+      "pitcher": "Adrian Houser (R)",
+      "ballpark": "Coors Field",
+      "game_time": "2026-05-31T01:10:00Z",
+      "score": 70.7,
+      "odds": "+400",
+      "ev_pct": -0.4,
+      "lineup_spot": 3,
+      "factors": {
+        "matchup": "ISO 0.243, 13 HR in 215 PA",
+        "park": "Coors Field HR factor 1.34",
+        "weather": "Live weather pending",
+        "pitcher": "HR/9 1.38",
+        "form": "Pull last 14 day Savant splits",
+        "sentiment": "X feed parse pending"
+      },
+      "rank": 8
     },
     {
       "player": "Christian Walker",
@@ -73,19 +178,19 @@
       "pitcher": "Brandon Sproat (R)",
       "ballpark": "Daikin Park",
       "game_time": "2026-05-30T20:10:00Z",
-      "score": 69.8,
-      "odds": "+425",
-      "ev_pct": 0.3,
+      "score": 69.6,
+      "odds": "n/a",
+      "ev_pct": 0,
       "lineup_spot": 3,
       "factors": {
-        "matchup": "ISO 0.258, 15 HR in 238 PA",
+        "matchup": "ISO 0.255, 15 HR in 242 PA",
         "park": "Daikin Park HR factor 1.09",
         "weather": "Live weather pending",
-        "pitcher": "HR/9 1.83",
+        "pitcher": "HR/9 1.84",
         "form": "Pull last 14 day Savant splits",
         "sentiment": "X feed parse pending"
       },
-      "rank": 4
+      "rank": 9
     },
     {
       "player": "Ozzie Albies",
@@ -95,116 +200,11 @@
       "ballpark": "Great American Ball Park",
       "game_time": "2026-05-30T23:15:00Z",
       "score": 68.5,
-      "odds": "+420",
-      "ev_pct": -0.2,
+      "odds": "+440",
+      "ev_pct": 0.6,
       "lineup_spot": 4,
       "factors": {
         "matchup": "ISO 0.160, 9 HR in 251 PA",
-        "park": "Great American Ball Park HR factor 1.25",
-        "weather": "Live weather pending",
-        "pitcher": "HR/9 2.74",
-        "form": "Pull last 14 day Savant splits",
-        "sentiment": "X feed parse pending"
-      },
-      "rank": 5
-    },
-    {
-      "player": "Ronald Acu\u00f1a Jr.",
-      "team": "Atlanta Braves",
-      "opponent": "Cincinnati Reds",
-      "pitcher": "Brady Singer (R)",
-      "ballpark": "Great American Ball Park",
-      "game_time": "2026-05-30T23:15:00Z",
-      "score": 68.1,
-      "odds": "+340",
-      "ev_pct": -3.7,
-      "lineup_spot": 1,
-      "factors": {
-        "matchup": "ISO 0.141, 4 HR in 198 PA",
-        "park": "Great American Ball Park HR factor 1.25",
-        "weather": "Live weather pending",
-        "pitcher": "HR/9 2.74",
-        "form": "Pull last 14 day Savant splits",
-        "sentiment": "X feed parse pending"
-      },
-      "rank": 6
-    },
-    {
-      "player": "Dominic Smith",
-      "team": "Atlanta Braves",
-      "opponent": "Cincinnati Reds",
-      "pitcher": "Brady Singer (R)",
-      "ballpark": "Great American Ball Park",
-      "game_time": "2026-05-30T23:15:00Z",
-      "score": 67.7,
-      "odds": "+400",
-      "ev_pct": -1.1,
-      "lineup_spot": 5,
-      "factors": {
-        "matchup": "ISO 0.177, 5 HR in 128 PA",
-        "park": "Great American Ball Park HR factor 1.25",
-        "weather": "Live weather pending",
-        "pitcher": "HR/9 2.74",
-        "form": "Pull last 14 day Savant splits",
-        "sentiment": "X feed parse pending"
-      },
-      "rank": 7
-    },
-    {
-      "player": "JJ Bleday",
-      "team": "Cincinnati Reds",
-      "opponent": "Atlanta Braves",
-      "pitcher": "Mart\u00edn P\u00e9rez (R)",
-      "ballpark": "Great American Ball Park",
-      "game_time": "2026-05-30T23:15:00Z",
-      "score": 66.1,
-      "odds": "+350",
-      "ev_pct": -3.7,
-      "lineup_spot": 6,
-      "factors": {
-        "matchup": "ISO 0.317, 8 HR in 120 PA",
-        "park": "Great American Ball Park HR factor 1.25",
-        "weather": "Live weather pending",
-        "pitcher": "HR/9 0.97",
-        "form": "Pull last 14 day Savant splits",
-        "sentiment": "X feed parse pending"
-      },
-      "rank": 8
-    },
-    {
-      "player": "Brandon Lowe",
-      "team": "Pittsburgh Pirates",
-      "opponent": "Minnesota Twins",
-      "pitcher": "Bailey Ober (R)",
-      "ballpark": "PNC Park",
-      "game_time": "2026-05-30T20:05:00Z",
-      "score": 63.5,
-      "odds": "+410",
-      "ev_pct": -1.6,
-      "lineup_spot": 2,
-      "factors": {
-        "matchup": "ISO 0.278, 14 HR in 230 PA",
-        "park": "PNC Park HR factor 0.94",
-        "weather": "Live weather pending",
-        "pitcher": "HR/9 1.45",
-        "form": "Pull last 14 day Savant splits",
-        "sentiment": "X feed parse pending"
-      },
-      "rank": 9
-    },
-    {
-      "player": "Mauricio Dub\u00f3n",
-      "team": "Atlanta Braves",
-      "opponent": "Cincinnati Reds",
-      "pitcher": "Brady Singer (R)",
-      "ballpark": "Great American Ball Park",
-      "game_time": "2026-05-30T23:15:00Z",
-      "score": 62.4,
-      "odds": "+575",
-      "ev_pct": 2.9,
-      "lineup_spot": 6,
-      "factors": {
-        "matchup": "ISO 0.124, 3 HR in 217 PA",
         "park": "Great American Ball Park HR factor 1.25",
         "weather": "Live weather pending",
         "pitcher": "HR/9 2.74",
@@ -219,22 +219,22 @@
       {
         "name": "Top 2 Anchors",
         "legs": [
-          "Matt Olson HR",
-          "Michael Harris II HR"
+          "Casey Schmitt HR",
+          "Matt Olson HR"
         ],
-        "combined_odds": "+1437",
-        "reasoning": "Two highest-scored picks: Matt Olson (80.9) and Michael Harris II (76.2). Different games reduce correlation."
+        "combined_odds": "+1962",
+        "reasoning": "Two highest-scored picks: Casey Schmitt (81.9) and Matt Olson (80.9). Different games reduce correlation."
       }
     ],
     "three_leg": [
       {
         "name": "Triple Threat",
         "legs": [
+          "Casey Schmitt HR",
           "Matt Olson HR",
-          "Michael Harris II HR",
-          "Yordan Alvarez HR"
+          "Eric Haase HR"
         ],
-        "combined_odds": "+6050",
+        "combined_odds": "+13306",
         "reasoning": "Three highest-scored picks. Lottery payout, model edge on every leg."
       }
     ]
